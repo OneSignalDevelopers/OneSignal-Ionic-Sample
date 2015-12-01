@@ -11,7 +11,8 @@ angular.module('starter', ['ionic'])
     // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
     var notificationOpenedCallback = function(jsonData) {
-      alert("Notification received:\n" + JSON.stringify(jsonData));
+      //alert("Notification received:\n" + JSON.stringify(jsonData));
+      (new Windows.UI.Popups.MessageDialog(JSON.stringify(jsonData), "Notification received")).showAsync().done();
       console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
     };
 

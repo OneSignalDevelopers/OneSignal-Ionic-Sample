@@ -11,13 +11,14 @@ angular.module('starter', ['ionic'])
     // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 
     var notificationOpenedCallback = function(jsonData) {
-      alert("Notification received:\n" + JSON.stringify(jsonData));
-      console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+      alert("Notification opened:\n" + JSON.stringify(jsonData));
+      console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
     };
 
-    // Update with your OneSignal AppId and googleProjectNumber before running.
-    window.plugins.OneSignal.init("b2f7f966-d8cc-11e4-bed1-df8f05be55ba",
-                                   {googleProjectNumber: "703322744261"},
-                                   notificationOpenedCallback);
+    // TODO: Update with your OneSignal AppId and googleProjectNumber before running.
+    window.plugins.OneSignal
+      .startInit("b2f7f966-d8cc-11e4-bed1-df8f05be55ba", "703322744261")
+      .handleNotificationOpened(notificationOpenedCallback)
+      .endInit();
   });
 })

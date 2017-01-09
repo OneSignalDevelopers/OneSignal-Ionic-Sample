@@ -15,9 +15,9 @@ angular.module('starter', ['ionic'])
       console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
     };
 
-    // TODO: Update with your OneSignal AppId and googleProjectNumber before running.
+    // TODO: Update with your OneSignal AppId before running.
     window.plugins.OneSignal
-      .startInit("b2f7f966-d8cc-11e4-bed1-df8f05be55ba", "703322744261")
+      .startInit("b2f7f966-d8cc-11e4-bed1-df8f05be55ba")
       .handleNotificationOpened(notificationOpenedCallback)
       .endInit();
   });

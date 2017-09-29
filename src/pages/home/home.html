@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>OneSignal Starter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+ <p>
+    <button ion-button (click)='registerForPushNotifications();'>Subscribe on iOS </button> 
+  </p>
+  <p>
+    <button ion-button (click)='sendTags();'>Send Tags</button>
+  </p>
+  <p>
+    <button ion-button (click)='getAndUpdateTag();'>Get and Update Tags</button>
+  </p>
+  <p>
+    <button ion-button (click)='getOneSignalPlayerId();'>Get PlayerID</button>
+  </p>
+  <p>
+    <button ion-button (click)='promptLocation();'>Prompt Location</button>
+  </p>
+  <p>
+    <button ion-button (click)='sendNotificationwithImage();'>Send PN with Image</button>
+  </p>
+  <p>
+    <button ion-button (click)='sendNotificationWithActionButtonsAndDeepLink();'>Send PN Action Buttons and Deep Link</button>
+  </p>
+
+</ion-content>

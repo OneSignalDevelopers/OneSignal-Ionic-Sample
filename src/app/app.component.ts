@@ -55,7 +55,7 @@ export class MyApp {
       };
 
       window["plugins"].OneSignal
-        .startInit("5c9ca215-e7c5-4214-8a45-6f2e1b84c12f", "388536902528")
+        .startInit("5c9ca215-e7c5-4214-8a45-6f2e1b84c12f")
         .iOSSettings(iosSettings) // only needed if added Optional OneSignal code for iOS above
         .inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification)
         .handleNotificationOpened(notificationOpenedCallback)
